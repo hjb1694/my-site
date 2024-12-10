@@ -177,9 +177,35 @@ body {
         font-weight: 300;
         text-align: center;
         margin-top:1rem;
-        transform: rotate(-5deg);
-        color: #ccc;
+        transform: rotate(-5deg) translate(1rem, -.2rem);
+        color: #cdcdcd;
+
     }
+
+    &__logo-container {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        max-width:100rem;
+        margin:2rem auto;
+        padding:1rem;
+    }
+}
+
+.skill-logo{
+    height:15rem;
+    margin:3rem;
+    display:block;
+}
+
+.footer {
+    background: var(--black);
+    padding: 4rem 0;
+    color: var(--white);
+    text-align: center;
+    font-size: 1.6rem;
 }
 
 

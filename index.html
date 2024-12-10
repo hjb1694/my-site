@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hayden Bradfield</title>
+    <meta property="og:title" content="Hayden Bradfield" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://haydenbradfield.com/me.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://haydenbradfield.com" />
+    <meta name="description" content="The Website of Hayden Bradfield, Knoxville, TN"/>
+    <meta property="og:description" content="The Website of Hayden Bradfield, Knoxville, TN" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
@@ -39,8 +47,25 @@
     </section>
     <section class="skills">
         <h2>My Skills</h2>
-        <h3>... [At a Glance]</h3>
+        <h3>...at a <u>glance</u></h3>
+        <div class="skills__logo-container">
+            <img class="skill-logo" src="./ts-logo.png" alt="typescript logo" data-aos="zoom-in-up"/>
+            <img class="skill-logo" src="./js-logo.png" alt="javascript logo" data-aos="zoom-in-up"/>
+            <img class="skill-logo" src="./vue-logo.png" alt="vue logo"  data-aos="zoom-in-up"/>
+            <img class="skill-logo" src="./nuxt_logo_2.png" alt="Nuxt logo"  data-aos="zoom-in-up"/>
+            <img class="skill-logo" src="./html-5.png" alt="HTML 5 logo" data-aos="zoom-in-up"/>
+            <img class="skill-logo" src="./css-3.png" alt="CSS 3 Logo" data-aos="zoom-in-up"/>
+            <img class="skill-logo" src="./node-js-logo.png" alt="NodeJS Logo" data-aos="zoom-in-up"/>
+            <img class="skill-logo" src="./express-logo.png" alt="Express Logo" style="height:10rem;" data-aos="zoom-in-up"/>
+            <img class="skill-logo" src="./postgres-logo.png" alt="Postgres Logo" data-aos="zoom-in-up"/>
+            <img class="skill-logo" src="./sass-logo.png" alt="Sass Logo" data-aos="zoom-in-up"/>
+        </div>
     </section>
+    <footer class="footer">
+        <small>&copy;2024 Hayden Bradfield</small>
+        <p>Updated 2024/12/09</p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
 
         const dynamicWord = document.querySelector('.hero__content p');
@@ -60,6 +85,8 @@
 
             dynamicWord.textContent = words[seq];
         }, 2500);
+
+        AOS.init();
 
     </script>
 </body>
