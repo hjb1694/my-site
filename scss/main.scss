@@ -36,16 +36,21 @@ body {
         margin: 0 auto;
         display: block;
         width: 20rem;
+        transition: transform .3s;
+
+        &.shrink {
+            transform: scale(0.75) translateY(-3rem);
+        }
     }
 
     &__left, 
     &__right {
         display: flex;
+        align-items: center;
     }
 
     &__right {
         justify-content: flex-end;
-        align-items: center;
     }
 }
 
@@ -87,6 +92,7 @@ body {
         justify-content: center;
         align-items: center;
         padding-top: 10rem;
+        user-select: none;
 
         h2 {
             font-size: 4rem;
@@ -138,6 +144,7 @@ body {
 .about {
     background: var(--black);
     padding: 5rem 2rem;
+    user-select: none;
 
     h2{
         color: #259689;
@@ -169,6 +176,7 @@ body {
         text-align: center;
         color: #eee;
         line-height: 1;
+        user-select: none;
     }
 
     h3 {
@@ -179,6 +187,7 @@ body {
         margin-top:1rem;
         transform: rotate(-5deg) translate(1rem, -.2rem);
         color: #cdcdcd;
+        user-select: none;
 
     }
 
@@ -216,6 +225,11 @@ body {
         &__logo {
             width: 15rem;
             transform: translateX(-2rem);
+            transition: transform .3s;
+
+            &.shrink {
+                transform: scale(0.62) translate(-2rem, -3.7rem);
+            }
         }
 
         &__left {

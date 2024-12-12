@@ -29,7 +29,7 @@
             </a>
         </div>
         <div class="header__right">
-            <a class="internal-btn" href="/resume" target="_blank">Resume</a>
+            <a class="internal-btn" href="/resume" target="_blank">Résumé</a>
         </div>
     </header>
     <section class="hero">
@@ -49,16 +49,16 @@
         <h2>My Skills</h2>
         <h3>...at a <u>glance</u></h3>
         <div class="skills__logo-container">
-            <img class="skill-logo" src="./ts-logo.png" alt="typescript logo" data-aos="zoom-in-up"/>
-            <img class="skill-logo" src="./js-logo.png" alt="javascript logo" data-aos="zoom-in-up"/>
-            <img class="skill-logo" src="./vue-logo.png" alt="vue logo"  data-aos="zoom-in-up"/>
-            <img class="skill-logo" src="./nuxt_logo_2.png" alt="Nuxt logo"  data-aos="zoom-in-up"/>
-            <img class="skill-logo" src="./html-5.png" alt="HTML 5 logo" data-aos="zoom-in-up"/>
-            <img class="skill-logo" src="./css-3.png" alt="CSS 3 Logo" data-aos="zoom-in-up"/>
-            <img class="skill-logo" src="./node-js-logo.png" alt="NodeJS Logo" data-aos="zoom-in-up"/>
-            <img class="skill-logo" src="./express-logo.png" alt="Express Logo" style="height:10rem;" data-aos="zoom-in-up"/>
-            <img class="skill-logo" src="./postgres-logo.png" alt="Postgres Logo" data-aos="zoom-in-up"/>
-            <img class="skill-logo" src="./sass-logo.png" alt="Sass Logo" data-aos="zoom-in-up"/>
+            <img class="skill-logo" src="./ts-logo.png" alt="typescript logo" data-aos="zoom-in-up" />
+            <img class="skill-logo" src="./js-logo.png" alt="javascript logo" data-aos="zoom-in-up" />
+            <img class="skill-logo" src="./vue-logo.png" alt="vue logo"  data-aos="zoom-in-up" />
+            <img class="skill-logo" src="./nuxt_logo_2.png" alt="Nuxt logo"  data-aos="zoom-in-up" />
+            <img class="skill-logo" src="./html-5.png" alt="HTML 5 logo" data-aos="zoom-in-up" />
+            <img class="skill-logo" src="./css-3.png" alt="CSS 3 Logo" data-aos="zoom-in-up" />
+            <img class="skill-logo" src="./node-js-logo.png" alt="NodeJS Logo" data-aos="zoom-in-up" />
+            <img class="skill-logo" src="./express-logo.png" alt="Express Logo" style="height:10rem;" data-aos="zoom-in-up" />
+            <img class="skill-logo" src="./postgres-logo.png" alt="Postgres Logo" data-aos="zoom-in-up" />
+            <img class="skill-logo" src="./sass-logo.png" alt="Sass Logo" data-aos="zoom-in-up" />
         </div>
     </section>
     <footer class="footer">
@@ -87,6 +87,18 @@
         }, 2500);
 
         AOS.init();
+
+        const headerLogo = document.querySelector('.header__logo');
+
+        const scrollFn = () => {
+            if(document.body.scrollTop > 30 || document.documentElement.scrollTop > 30){
+                headerLogo.classList.add('shrink');
+            }else{
+                headerLogo.classList.remove('shrink');
+            }
+        }
+
+        window.addEventListener('scroll', scrollFn);
 
     </script>
 </body>
