@@ -1,12 +1,16 @@
 {
   "name": "mysite",
+  "author": {
+    "name": "Hayden Bradfield",
+    "email": "me@haydenbradfield.com"
+  },
+  "private": true,
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "sass-build": "sass --watch --style=compressed ./scss/main.scss ./assets/style.css"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
