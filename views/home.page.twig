@@ -1,0 +1,161 @@
+{% extends './partials/page.partial.twig' %}
+{% block head %}
+    {% from './partials/head.macro.twig' import head_macro %}
+    {{ head_macro('Hayden Bradfield', 'https://haydenbradfield.com') }}
+{% endblock head %}
+{% block body %}
+<section class="hero">
+    <img class="hero__image" src="/assets/coding_space.jpg" alt="Hero Image" />
+    <div class="hero__content">
+        <h2>In pursuit of...</h2>
+        <p><!-- Dynamic Word --></p>
+    </div>
+</section>
+<section class="about">
+    <h2>Passionate, Dedicated, Talented</h2>
+    <p>
+        ...These are the words I would use to describe myself. I am sure my colleagues would agree. I strive to be a well-rounded developer and a valuable asset to any company or individual desiring software or web development solutions. With my professional experience, I can tackle many challenges and produce results that meet or exceed expectations.
+    </p>
+</section>
+<section class="skills">
+    <div class="skills__heading">
+        <h2>My Skills</h2>
+        <h3>at a glance</h3>
+    </div>
+    <div class="skills__logo-container">
+        <div class="skill-tile" data-aos="zoom-in-up">
+            <img class="skill-tile__logo" src="/assets/skill_logos/ts_logo.png" alt="Typescript logo" data-aos="zoom-in-up" />
+            <div class="skill-tile__overlay">
+                <img class="skill-tile__logo--small" src="/assets/skill_logos/ts_logo.png" alt="Typescript logo small size" />
+                <h4>TypeScript</h4>
+                <p>a scripting language with type safety, transpiles to JS</p>
+            </div>
+        </div>
+        <div class="skill-tile" data-aos="zoom-in-up">
+            <img class="skill-tile__logo" src="/assets/skill_logos/js_logo.png" alt="Typescript logo" data-aos="zoom-in-up" />
+            <div class="skill-tile__overlay">
+                <img class="skill-tile__logo--small" src="/assets/skill_logos/js_logo.png" alt="Javascript logo small size" />
+                <h4>JavaScript</h4>
+                <p>a scripting language for the web</p>
+            </div>
+        </div>
+        <div class="skill-tile" data-aos="zoom-in-up">
+            <img class="skill-tile__logo" src="/assets/skill_logos/vue_logo.png" alt="Vue logo" data-aos="zoom-in-up" />
+            <div class="skill-tile__overlay">
+                <img class="skill-tile__logo--small" src="/assets/skill_logos/vue_logo.png" alt="Vue logo small size" />
+                <h4>Vue</h4>
+                <p>a popular, progressive framework</p>
+            </div>
+        </div>
+        <div class="skill-tile" data-aos="zoom-in-up">
+            <img class="skill-tile__logo" src="/assets/skill_logos/nuxt_logo.png" alt="Nuxt logo" data-aos="zoom-in-up" />
+            <div class="skill-tile__overlay">
+                <img class="skill-tile__logo--small" src="/assets/skill_logos/nuxt_logo.png" alt="Nuxt logo small size" />
+                <h4>Nuxt</h4>
+                <p>a Vue-based framework</p>
+            </div>
+        </div>
+        <div class="skill-tile" data-aos="zoom-in-up">
+            <img class="skill-tile__logo" src="/assets/skill_logos/vite_logo.png" alt="Vite logo" data-aos="zoom-in-up" />
+            <div class="skill-tile__overlay">
+                <img class="skill-tile__logo--small" src="/assets/skill_logos/vite_logo.png" alt="Vite logo small size" />
+                <h4>Vite</h4>
+                <p>a fast build tool</p>
+            </div>
+        </div>
+        <div class="skill-tile" data-aos="zoom-in-up">
+            <img class="skill-tile__logo" src="/assets/skill_logos/html_logo.png" alt="HTML logo" data-aos="zoom-in-up" />
+            <div class="skill-tile__overlay">
+                <img class="skill-tile__logo--small" src="/assets/skill_logos/html_logo.png" alt="HTML logo small size" />
+                <h4>HTML</h4>
+                <p>a language that gives content & structure to webpages</p>
+            </div>
+        </div>
+        <div class="skill-tile" data-aos="zoom-in-up">
+            <img class="skill-tile__logo" src="/assets/skill_logos/css_logo.png" alt="CSS logo" data-aos="zoom-in-up" />
+            <div class="skill-tile__overlay">
+                <img class="skill-tile__logo--small" src="/assets/skill_logos/css_logo.png" alt="CSS logo small size" />
+                <h4>CSS</h4>
+                <p>a language used to style webpages</p>
+            </div>
+        </div>
+        <div class="skill-tile" data-aos="zoom-in-up">
+            <img class="skill-tile__logo" src="/assets/skill_logos/node_js_logo.png" alt="NodeJS logo" data-aos="zoom-in-up" />
+            <div class="skill-tile__overlay">
+                <img class="skill-tile__logo--small" src="/assets/skill_logos/node_js_logo.png" alt="NodeJS logo small size" />
+                <h4>NodeJS</h4>
+                <p>a JavaScript runtime to run scripts, tools, and servers</p>
+            </div>
+        </div>
+        <div class="skill-tile" data-aos="zoom-in-up">
+            <img class="skill-tile__logo" src="/assets/skill_logos/hono_logo.png" alt="Hono logo" data-aos="zoom-in-up" />
+            <div class="skill-tile__overlay">
+                <img class="skill-tile__logo--small" src="/assets/skill_logos/hono_logo.png" alt="Hono logo small size" />
+                <h4>Hono</h4>
+                <p>a JS/TS library for building apps</p>
+            </div>
+        </div>
+        <div class="skill-tile" data-aos="zoom-in-up">
+            <img class="skill-tile__logo" src="/assets/skill_logos/postgres_logo.png" alt="Postgres logo" data-aos="zoom-in-up" />
+            <div class="skill-tile__overlay">
+                <img class="skill-tile__logo--small" src="/assets/skill_logos/postgres_logo.png" alt="Postgres logo small size" />
+                <h4>Postgres</h4>
+                <p>a relational database solution</p>
+            </div>
+        </div>
+        <div class="skill-tile" data-aos="zoom-in-up">
+            <img class="skill-tile__logo" src="/assets/skill_logos/sass_logo.png" alt="Sass logo" data-aos="zoom-in-up" />
+            <div class="skill-tile__overlay">
+                <img class="skill-tile__logo--small" src="/assets/skill_logos/sass_logo.png" alt="Sass logo small size" />
+                <h4>Sass/SCSS</h4>
+                <p>a CSS preprocessor and language</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}
+{% block scripts %}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+
+    const dynamicWord = document.querySelector('.hero__content p');
+    const words = ['Strength', 'Skill', 'Excellence', 'Success'];
+    const menuBtn = document.querySelector('.menu-btn');
+    const headerRight = document.querySelector('.header__right');
+    let seq = 0;
+
+    dynamicWord.textContent = words[0];
+
+    setInterval(() => {
+        if(seq < (words.length - 1)){
+            seq++;
+        }else{
+            seq = 0;
+        }
+
+        dynamicWord.textContent = words[seq];
+    }, 2500);
+
+    AOS.init();
+
+    const headerLogo = document.querySelector('.header__logo');
+
+    const scrollFn = () => {
+        if(document.body.scrollTop > 30 || document.documentElement.scrollTop > 30){
+            headerLogo.classList.add('shrink');
+        }else{
+            headerLogo.classList.remove('shrink');
+        }
+    }
+
+    const toggleMenu = () => {
+        menuBtn.classList.toggle('open');
+        headerRight.classList.toggle('open');
+    }
+
+    window.addEventListener('scroll', scrollFn);
+
+    menuBtn.addEventListener('click', toggleMenu);
+
+</script>
+{% endblock scripts %}

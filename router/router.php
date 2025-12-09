@@ -11,7 +11,7 @@ function applyRouter($app) {
 
     $app->get("/", function(Request $request, Response $response){
         $view = Twig::fromRequest($request);
-        return $view->render($response, 'home.html.twig');
+        return $view->render($response, 'home.page.twig');
     });
 
 

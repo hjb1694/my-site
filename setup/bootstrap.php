@@ -17,6 +17,10 @@ function bootstrapApp(){
         if($exception instanceof HttpNotFoundException){
             return $response->withHeader("Location", "/")->withStatus(302);
         }
+
+        $response->getBody()->write('500 Error: ' . $exception);
+
+        return $response->withStatus(500);
     };
 
     $errorMiddleware = $app->addErrorMiddleware(true, true, true);
