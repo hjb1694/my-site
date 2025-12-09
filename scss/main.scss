@@ -335,7 +335,7 @@ body {
     color: var(--white);
     text-align: center;
     font-size: 1.6rem;
-    box-shadow: 0 0 .5rem rgba(0,0,0,.24);
+    box-shadow: 0 0 .5rem rgba(0,0,0,.5);
     margin-top: -4rem;
 }
 
@@ -370,6 +370,11 @@ body {
                 padding: 5rem 2rem 4rem 2rem;
             }
         }
+
+         &__sm-links {
+            flex-direction: column;
+           
+        }
     }
 
     .nav {
@@ -398,6 +403,8 @@ body {
     .menu-btn {
         display: block;
     }
+
+    
 }
 
 
@@ -412,11 +419,6 @@ body {
             &.shrink {
                 transform: scale(0.65) translateY(-2rem);
             }
-        }
-
-        &__sm-links {
-            flex-direction: column;
-           
         }
 
     }
