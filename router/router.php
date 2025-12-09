@@ -20,6 +20,11 @@ function applyRouter($app) {
         return $view->render($response, 'portfolio.page.twig');
     });
 
+    $app->get("/resume", function(Request $request, Response $response){
+        $view = Twig::fromRequest($request);
+        return $view->render($response, 'resume.page.twig');
+    });
+
 }
 
 ?>
