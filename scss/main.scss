@@ -352,8 +352,46 @@ body {
 }
 
 .portfolio-page {
-    min-height: 80vh;
+    min-height: 85vh;
     background: #141414;
+    padding: 2rem 2rem 8rem 2rem;
+}
+
+.portfolio-items {
+    max-width: 120rem;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    margin-top: 24rem;
+}
+
+.portfolio-item-tile {
+    width: 20rem;
+    height: 20rem;
+    flex-shrink: 0;
+    display: block;
+
+    &__image {
+        display: block;
+        width: 20rem;
+        height: 15rem;
+        object-fit: cover;
+    }
+
+    &__title {
+        text-decoration: none;
+        background: #000;
+        color: #ddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        height: 5rem;
+    }
 }
 
 @media (max-width: 824px) {
@@ -455,6 +493,10 @@ body {
         &__logo-container {
             flex-direction: column;
         }
+    }
+
+    .portfolio-items {
+        margin-top: 15rem;
     }
 
 }
