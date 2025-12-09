@@ -1,0 +1,16 @@
+{% extends './partials/page.partial.twig' %}
+{% block head %}
+    {% from './partials/head.macro.twig' import head_macro %}
+    {{ head_macro('Hayden Bradfield - Portfolio', 'https://haydenbradfield.com/portfolio') }}
+{% endblock head %}
+{% block body %}
+    <div class="portfolio-page">
+        <section class="portfolio-items">
+            
+        </section>
+    </div>
+{% endblock body %}
+{% block scripts %}
+<script src="/assets/js/header_nav_toggle.js"></script>
+<script src="/assets/js/header_logo_scroll_shrink.js"></script>
+{% endblock scripts %}

@@ -15,6 +15,11 @@ function applyRouter($app) {
     });
 
 
+    $app->get("/portfolio", function(Request $request, Response $response){
+        $view = Twig::fromRequest($request);
+        return $view->render($response, 'portfolio.page.twig');
+    });
+
 }
 
 ?>

@@ -18,6 +18,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+
 .header {
     background: #000;
     position: fixed;
@@ -28,12 +29,17 @@ body {
     display: flex;
     justify-content: space-between;
 
-    &__logo {
+    &__logo-link {
         position: absolute;
         left: 0;
         right: 0;
         top: 0;
         margin: 0 auto;
+        display: block;
+        width: 20rem;
+    }
+
+    &__logo {
         display: block;
         width: 20rem;
         transition: transform .3s;
@@ -345,6 +351,11 @@ body {
     }
 }
 
+.portfolio-page {
+    min-height: 80vh;
+    background: #141414;
+}
+
 @media (max-width: 824px) {
     .header {
         flex-direction: column;
@@ -417,6 +428,10 @@ body {
 @media (max-width: 500px) {
 
     .header {
+
+        &__logo-link {
+            width: 15rem;
+        }
 
         &__logo {
             width: 15rem;
