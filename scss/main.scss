@@ -243,12 +243,13 @@ body {
     h3 {
         font-size: 1.6rem;
         color: var(--white);
-        font-weight: 300;
         text-align: center;
         user-select: none;
         margin-top: -4.7rem;
         background: #265461;
         padding: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
     &__logo-container {
@@ -337,9 +338,13 @@ body {
     font-size: 1.6rem;
     box-shadow: 0 0 .5rem rgba(0,0,0,.5);
     margin-top: -4rem;
+
+    p{
+        margin-top: 2rem;
+    }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 824px) {
     .header {
         flex-direction: column;
         align-items: flex-start;
@@ -366,7 +371,7 @@ body {
             transition: all .3s;
 
             &.open {
-                height: 25rem;
+                height: 40rem;
                 padding: 5rem 2rem 4rem 2rem;
             }
         }
@@ -418,6 +423,13 @@ body {
 
             &.shrink {
                 transform: scale(0.65) translateY(-2rem);
+            }
+        }
+
+        &__right {
+            &.open {
+                height: 28rem;
+                padding: 5rem 2rem 4rem 2rem;
             }
         }
 
