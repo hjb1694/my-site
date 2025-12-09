@@ -24,7 +24,7 @@ body {
     height: 10rem;
     width:100%;
     z-index: 1000;
-    padding:0 1.5rem;
+    padding:1.5rem;
     display: flex;
     justify-content: space-between;
 
@@ -51,6 +51,77 @@ body {
 
     &__right {
         justify-content: flex-end;
+    }
+
+    &__sm-links {
+        display: flex;
+    }
+
+}
+
+.nav {
+    &__list {
+        display:flex;
+        list-style: none;
+        list-style-type: inside;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    &__item {
+        display: block;
+
+        a,
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: #eee;
+            font-size: 1.8rem;
+            transition: color .3s;
+
+            &:hover {
+                color: #ccc;
+            }
+
+            &.internal-btn {
+                border: 1px solid #eee;
+                padding: .8rem 1rem;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+.menu-btn {
+    display:none;
+    padding: .8rem;
+    border:none;
+    background: transparent;
+    cursor: pointer;
+
+    &__hamburger-line {
+        background: #ccc;
+        height: 3px;
+        width: 3rem;
+        margin: .5rem;
+        transition: all .3s;
+        pointer-events: none;
+    }
+
+
+    &.open &__hamburger-line {
+
+        &--1 {
+            transform: rotate(50deg) translateY(14px);
+        }
+
+        &--2 {
+            opacity: 0;
+        }
+
+        &--3 {
+            transform: rotate(-50deg) translateY(-13px) translateX(-1px);
+        }
     }
 }
 
@@ -128,21 +199,8 @@ body {
 
 }
 
-.internal-btn,
-.internal-btn:link,
-.internal-btn:visited {
-    display: inline-block;
-    padding: .8rem 1rem;
-    font-size: 1.6rem;
-    font-family: inherit;
-    color: var(--white);
-    border: 1px solid var(--white);
-    border-radius: .5rem;
-    text-decoration: none;
-}
-
 .about {
-    background: var(--black);
+    background: #141414;
     padding: 5rem 2rem;
     user-select: none;
 
@@ -167,8 +225,8 @@ body {
 }
 
 .skills {
-    background: #255662;
-    padding: 5rem 2rem;
+    background: #30656e;
+
 
     h2 {
         font-size: 3rem;
@@ -177,21 +235,24 @@ body {
         color: #eee;
         line-height: 1;
         user-select: none;
+        background: #183b44;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - 7rem) calc(100% - 4.2rem), 7rem calc(100% - 4.2rem), 0 100%); 
+        padding:3rem 0 6rem 0;
     }
 
     h3 {
-        font-size: 2.2rem;
+        font-size: 1.6rem;
         color: var(--white);
         font-weight: 300;
         text-align: center;
-        margin-top:1rem;
-        transform: rotate(-5deg) translate(1rem, -.2rem);
-        color: #cdcdcd;
         user-select: none;
-
+        margin-top: -4.7rem;
+        background: #265461;
+        padding: 1.5rem;
     }
 
     &__logo-container {
+        padding: 5rem 2rem 8rem 2rem;
         display:flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -274,6 +335,69 @@ body {
     color: var(--white);
     text-align: center;
     font-size: 1.6rem;
+    box-shadow: 0 0 .5rem rgba(0,0,0,.24);
+    margin-top: -4rem;
+}
+
+@media (max-width: 800px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0;
+        z-index: 2000;
+        height: auto;
+
+        &__left {
+            padding: 1.1rem;
+            background: #000;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            margin:0;
+        }
+
+        &__right {
+            height:0;
+            overflow: hidden;
+            background: #181818;
+            width: 100%;
+            justify-content: center;
+            transition: all .3s;
+
+            &.open {
+                height: 25rem;
+                padding: 5rem 2rem 4rem 2rem;
+            }
+        }
+    }
+
+    .nav {
+        &__list {
+            flex-direction: column;
+            align-items:center;
+            row-gap: 3rem;
+        }
+
+        &__item {
+            margin:0;
+            a,
+            a:link,
+            a:visited  {
+                margin: 0;
+
+                &.internal-btn {
+                    border:none;
+                    font-size: 1.8rem;
+                }
+            
+            }
+        }
+    }
+
+    .menu-btn {
+        display: block;
+    }
 }
 
 
@@ -283,16 +407,16 @@ body {
 
         &__logo {
             width: 15rem;
-            transform: translateX(-2rem);
             transition: transform .3s;
 
             &.shrink {
-                transform: scale(0.62) translate(-2rem, -3.7rem);
+                transform: scale(0.65) translateY(-2rem);
             }
         }
 
-        &__left {
+        &__sm-links {
             flex-direction: column;
+           
         }
 
     }

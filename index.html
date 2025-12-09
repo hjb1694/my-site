@@ -22,15 +22,28 @@
     <header class="header">
         <img class="header__logo" src="./assets/hayden_logo.png" alt="Logo" />
         <div class="header__left">
-            <a class="link-btn" href="https://www.linkedin.com/in/hayden-bradfield-56883622a">
-                <img src="./assets/icons/linkedin.svg" alt="LinkedIn">
-            </a>
-            <a class="link-btn" href="https://www.github.com/hjb1694">
-                <img src="./assets/icons/github.svg" alt="LinkedIn">
-            </a>
+            <div class="header__sm-links">
+                <a class="link-btn" href="https://www.linkedin.com/in/hayden-bradfield-56883622a">
+                    <img src="./assets/icons/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a class="link-btn" href="https://www.github.com/hjb1694">
+                    <img src="./assets/icons/github.svg" alt="LinkedIn">
+                </a>
+            </div>
+            <button class="menu-btn">
+                <div class="menu-btn__hamburger-line menu-btn__hamburger-line--1"></div>
+                <div class="menu-btn__hamburger-line menu-btn__hamburger-line--2"></div>
+                <div class="menu-btn__hamburger-line menu-btn__hamburger-line--3"></div>
+            </button>
         </div>
         <div class="header__right">
-            <a class="internal-btn" href="/resume" target="_blank">Résumé</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#">Portfolio</a></li>
+                    <li class="nav__item"><a href="#">Services</a></li>
+                    <li class="nav__item"><a class="internal-btn" href="/resume" target="_blank">Résumé</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <section class="hero">
@@ -47,8 +60,10 @@
         </p>
     </section>
     <section class="skills">
-        <h2>My Skills</h2>
-        <h3>...at a <u>glance</u></h3>
+        <div class="skills__heading">
+            <h2>My Skills</h2>
+            <h3>at a glance</h3>
+        </div>
         <div class="skills__logo-container">
             <div class="skill-tile" data-aos="zoom-in-up">
                 <img class="skill-tile__logo" src="./assets/skill_logos/ts_logo.png" alt="Typescript logo" data-aos="zoom-in-up" />
@@ -149,6 +164,8 @@
 
         const dynamicWord = document.querySelector('.hero__content p');
         const words = ['Strength', 'Skill', 'Excellence', 'Success'];
+        const menuBtn = document.querySelector('.menu-btn');
+        const headerRight = document.querySelector('.header__right');
         let seq = 0;
 
         dynamicWord.textContent = words[0];
@@ -175,7 +192,14 @@
             }
         }
 
+        const toggleMenu = () => {
+            menuBtn.classList.toggle('open');
+            headerRight.classList.toggle('open');
+        }
+
         window.addEventListener('scroll', scrollFn);
+
+        menuBtn.addEventListener('click', toggleMenu);
 
     </script>
 </body>
