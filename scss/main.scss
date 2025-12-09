@@ -365,7 +365,7 @@ body {
     justify-content: center;
     align-items: center;
     align-content: flex-start;
-    margin-top: 24rem;
+    margin: 24rem auto 0 auto;
 }
 
 .portfolio-item-tile {
@@ -373,6 +373,7 @@ body {
     height: 20rem;
     flex-shrink: 0;
     display: block;
+    box-shadow: 0 0 .5rem rgba(0,0,0,.8);
 
     &__image {
         display: block;
@@ -391,6 +392,7 @@ body {
         font-size: 1.3rem;
         font-weight: bold;
         height: 5rem;
+        text-align: center;
     }
 }
 
