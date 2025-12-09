@@ -10,46 +10,10 @@
 {% endblock body %}
 {% block scripts %}
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="/assets/js/header_nav_toggle.js"></script>
+<script src="/assets/js/header_logo_scroll_shrink.js"></script>
+<script src="/assets/js/hero_dynamic_word.js"></script>
 <script>
-
-    const dynamicWord = document.querySelector('.hero__content p');
-    const words = ['Strength', 'Skill', 'Excellence', 'Success'];
-    const menuBtn = document.querySelector('.menu-btn');
-    const headerRight = document.querySelector('.header__right');
-    let seq = 0;
-
-    dynamicWord.textContent = words[0];
-
-    setInterval(() => {
-        if(seq < (words.length - 1)){
-            seq++;
-        }else{
-            seq = 0;
-        }
-
-        dynamicWord.textContent = words[seq];
-    }, 2500);
-
     AOS.init();
-
-    const headerLogo = document.querySelector('.header__logo');
-
-    const scrollFn = () => {
-        if(document.body.scrollTop > 30 || document.documentElement.scrollTop > 30){
-            headerLogo.classList.add('shrink');
-        }else{
-            headerLogo.classList.remove('shrink');
-        }
-    }
-
-    const toggleMenu = () => {
-        menuBtn.classList.toggle('open');
-        headerRight.classList.toggle('open');
-    }
-
-    window.addEventListener('scroll', scrollFn);
-
-    menuBtn.addEventListener('click', toggleMenu);
-
 </script>
 {% endblock scripts %}
